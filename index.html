@@ -13,20 +13,27 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #000;
             color: #fff;
-            background-image: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215a31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-blend-mode: overlay;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
         }
         .gold-text {
             color: #D4AF37;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .text-shadow-lg {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .text-shadow-md {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .text-shadow-xl {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
         .gold-border {
             border-color: #D4AF37;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
         .gold-bg {
             background-color: #D4AF37;
@@ -47,8 +54,14 @@
     <header class="bg-black py-6 px-4 sm:px-6 lg:px-8 border-b gold-border">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <div class="text-3xl font-bold gold-text mr-2">PD</div>
-                <div class="text-xl font-semibold">PROD. DUO</div>
+                <div class="text-3xl font-bold gold-text mr-2 relative">
+                    <span class="absolute inset-0 bg-black rounded-full transform rotate-2 opacity-90"></span>
+                    <span class="relative z-10 text-shadow-lg shadow-yellow-700">PD</span>
+                </div>
+                <div class="text-xl font-semibold relative">
+                    <span class="absolute inset-0 bg-black rounded-sm transform -rotate-1 opacity-80"></span>
+                    <span class="relative z-10 text-shadow-md shadow-yellow-600">PROD. DUO</span>
+                </div>
             </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="hover-gold">Sobre</a>
@@ -64,11 +77,14 @@
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-80"></div>
-        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none opacity-60 filter sepia-30">
+        <video autoplay muted loop class="absolute z-0 w-auto min-w-full min-h-full max-w-none opacity-60">
             <source src="https://assets.mixkit.co/videos/preview/mixkit-wedding-couple-in-love-1210-large.mp4" type="video/mp4">
         </video>
         <div class="container mx-auto px-4 z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 gold-text">CAPTURANDO MOMENTOS INESQUECÍVEIS</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 gold-text relative">
+                <span class="absolute inset-0 bg-black rounded-md transform rotate-1 opacity-70"></span>
+                <span class="relative z-10 text-shadow-xl shadow-yellow-800">CAPTURANDO MOMENTOS INESQUECÍVEIS</span>
+            </h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Independente de onde seja o evento, o que ficará para a vida serão os registros de foto e vídeo!</p>
             <a href="#packages" class="gold-bg text-black font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300 inline-block">CONHEÇA NOSSOS PACOTES</a>
         </div>
@@ -78,7 +94,10 @@
     <section id="about" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">SOBRE A PROD. DUO</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text relative">
+                    <span class="absolute inset-0 bg-black rounded-sm transform -rotate-1 opacity-80"></span>
+                    <span class="relative z-10 text-shadow-lg shadow-yellow-700">SOBRE A PROD. DUO</span>
+                </h2>
                 <div class="w-24 h-1 gold-bg mx-auto"></div>
             </div>
             <div class="max-w-4xl mx-auto text-center text-lg">
@@ -92,7 +111,10 @@
     <section id="packages" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">NOSSOS PACOTES</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text relative">
+                    <span class="absolute inset-0 bg-black rounded-sm transform rotate-1 opacity-80"></span>
+                    <span class="relative z-10 text-shadow-lg shadow-yellow-700">NOSSOS PACOTES</span>
+                </h2>
                 <div class="w-24 h-1 gold-bg mx-auto"></div>
             </div>
             <div class="flex flex-wrap justify-center gap-8">
@@ -129,7 +151,7 @@
                             <span>Entrega de todas as fotos em alta resolução</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5511930711112?text=Vi%20os%20pacotes%20e%20gostaria%20de%20saber!" target="_blank" class="gold-bg text-black font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 w-full text-center block">QUERO ESTE PACOTE</a>
+                    <a href="#contact" class="gold-bg text-black font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 w-full text-center block">QUERO ESTE PACOTE</a>
                 </div>
 
                 <!-- Package 2 -->
@@ -166,7 +188,7 @@
                             <span>Entrega de todas as fotos em alta resolução</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5511930711112?text=Vi%20os%20pacotes%20e%20gostaria%20de%20saber!" target="_blank" class="gold-bg text-black font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 w-full text-center block">QUERO ESTE PACOTE</a>
+                    <a href="#contact" class="gold-bg text-black font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 w-full text-center block">QUERO ESTE PACOTE</a>
                 </div>
             </div>
         </div>
@@ -176,21 +198,24 @@
     <section class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">NOSSOS TRABALHOS</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text relative">
+                    <span class="absolute inset-0 bg-black rounded-sm transform -rotate-1 opacity-80"></span>
+                    <span class="relative z-10 text-shadow-lg shadow-yellow-700">NOSSOS TRABALHOS</span>
+                </h2>
                 <div class="w-24 h-1 gold-bg mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="overflow-hidden rounded-lg">
-                    <img src="https://huggingface.co/spaces/Prodduo/prodduo/resolve/main/images/Generated Image September 03, 2025 - 12_17PM.jpeg" alt="Evento Vintage 1" class="w-full h-96 object-cover hover:scale-105 transition duration-500 filter sepia-50">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Casamento" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg">
-                    <img src="https://huggingface.co/spaces/Prodduo/prodduo/resolve/main/images/Generated Image September 03, 2025 - 12_18PM.jpeg" alt="Evento Vintage 2" class="w-full h-96 object-cover hover:scale-105 transition duration-500 filter sepia-50">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Aniversário" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80&sepia=50%" alt="Casamento" class="w-full h-96 object-cover hover:scale-105 transition duration-500 filter sepia-50">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Show" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80&sepia=50%" alt="Aniversário" class="w-full h-96 object-cover hover:scale-105 transition duration-500 filter sepia-50">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Evento Corporativo" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
                 </div>
             </div>
         </div>
@@ -210,7 +235,10 @@
     <section id="contact" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">ENTRE EM CONTATO</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text relative">
+                    <span class="absolute inset-0 bg-black rounded-sm transform rotate-1 opacity-80"></span>
+                    <span class="relative z-10 text-shadow-lg shadow-yellow-700">ENTRE EM CONTATO</span>
+                </h2>
                 <div class="w-24 h-1 gold-bg mx-auto"></div>
             </div>
             <div class="max-w-2xl mx-auto">
@@ -242,8 +270,14 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-6 md:mb-0">
-                    <div class="text-3xl font-bold gold-text mr-2">PD</div>
-                    <div class="text-xl font-semibold">PROD. DUO</div>
+                    <div class="text-3xl font-bold gold-text mr-2 relative">
+                        <span class="absolute inset-0 bg-black rounded-full transform rotate-2 opacity-90"></span>
+                        <span class="relative z-10 text-shadow-lg shadow-yellow-700">PD</span>
+                    </div>
+                    <div class="text-xl font-semibold relative">
+                        <span class="absolute inset-0 bg-black rounded-sm transform -rotate-1 opacity-80"></span>
+                        <span class="relative z-10 text-shadow-md shadow-yellow-600">PROD. DUO</span>
+                    </div>
                 </div>
                 <div class="flex space-x-6 mb-6 md:mb-0">
                     <a href="https://www.instagram.com/prod.duo?igsh=YXRiMWczZGx4ZHlz" target="_blank" class="hover-gold"><i data-feather="instagram"></i></a>
