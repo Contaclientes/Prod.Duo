@@ -12,11 +12,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             color: #fff;
-            background-image: url('https://huggingface.co/spaces/Prodduo/prodduo/resolve/main/images/ChatGPT%20Image%203%20de%20set.%20de%202025%2C%2008_12_28.png');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #000;
         }
         .gold-text {
             color: #D4AF37;
@@ -36,9 +32,48 @@
             transition: all 0.3s ease;
             box-shadow: 0 20px 25px -5px rgba(212, 175, 55, 0.1), 0 10px 10px -5px rgba(212, 175, 55, 0.04);
         }
+        .social-icons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background-color: #D4AF37;
+            color: #000;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="min-h-screen">
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/prod.duo?igsh=YXRiMWczZGx4ZHlz" target="_blank" class="social-icon">
+            <i data-feather="instagram"></i>
+        </a>
+        <a href="https://wa.me/5511930711112" target="_blank" class="social-icon">
+            <i data-feather="message-circle"></i>
+        </a>
+        <a href="#" class="social-icon">
+            <i data-feather="youtube"></i>
+        </a>
+    </div>
+
     <!-- Header -->
     <header class="bg-black py-6 px-4 sm:px-6 lg:px-8 border-b gold-border">
         <div class="container mx-auto flex justify-between items-center">
@@ -58,9 +93,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70"></div>
+    <section class="relative h-screen flex items-center justify-center">
         <div class="container mx-auto px-4 z-10 text-center">
             <a href="https://wa.me/5511930711112" target="_blank" class="absolute top-6 right-6 gold-bg text-black font-bold py-2 px-4 rounded-full hover:bg-opacity-90 transition duration-300 flex items-center gap-2">
                 <i data-feather="message-circle"></i> FALE CONOSCO
@@ -72,7 +105,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'); background-size: cover; background-position: center;">
+    <section id="about" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'); background-size: cover; background-position: center; color: #fff;">
         <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -87,7 +120,7 @@
     </section>
 
     <!-- Packages Section -->
-    <section id="packages" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+    <section id="packages" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center; color: #fff;">
         <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -167,7 +200,7 @@
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="gold-text mr-2 mt-1"></i>
-                            <span>Entrega de todas as fotos em alta resolução</span>
+                            <span>Entrega de todas das fotos em alta resolução</span>
                         </li>
                     </ul>
                     <div class="flex items-center justify-center gap-2">
@@ -182,8 +215,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-20 relative">
-        <div class="absolute inset-0 bg-black opacity-80 z-0"></div>
+    <section class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">NOSSOS TRABALHOS</h2>
@@ -207,8 +239,7 @@
     </section>
 
     <!-- Value Proposition -->
-    <section class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <section class="py-20 bg-gray-900">
         <div class="container mx-auto px-4 text-center">
             <blockquote class="max-w-4xl mx-auto">
                 <p class="text-2xl md:text-3xl italic mb-6">"Independente de onde seja o evento, o que ficará para a vida serão os registros de foto e vídeo!"</p>
@@ -218,8 +249,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <section id="contact" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">ENTRE EM CONTATO</h2>
@@ -229,19 +259,19 @@
                 <form class="space-y-6">
                     <div>
                         <label for="name" class="block mb-2">Nome</label>
-                        <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
                     </div>
                     <div>
                         <label for="email" class="block mb-2">E-mail</label>
-                        <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
                     </div>
                     <div>
                         <label for="whatsapp" class="block mb-2">WhatsApp</label>
-                        <input type="tel" id="whatsapp" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <input type="tel" id="whatsapp" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
                     </div>
                     <div>
                         <label for="message" class="block mb-2">Mensagem</label>
-                        <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        <textarea id="message" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
                     </div>
                     <button type="submit" class="gold-bg text-black font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300 w-full">ENVIAR MENSAGEM</button>
                 </form>
@@ -250,18 +280,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="relative py-12 border-t gold-border" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <footer class="py-12 border-t gold-border bg-black text-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-6 md:mb-0">
                     <div class="text-3xl font-bold gold-text mr-2">PD</div>
                     <div class="text-xl font-semibold">PROD. DUO</div>
-                </div>
-                <div class="flex space-x-6 mb-6 md:mb-0">
-                    <a href="https://www.instagram.com/prod.duo?igsh=YXRiMWczZGx4ZHlz" target="_blank" class="hover-gold"><i data-feather="instagram"></i></a>
-                    <a href="https://wa.me/5511930711112" target="_blank" class="hover-gold"><i data-feather="phone"></i></a>
-                    <a href="#" class="hover-gold"><i data-feather="youtube"></i></a>
                 </div>
                 <div class="text-sm">
                     © 2023 Prod. Duo. Todos os direitos reservados.
