@@ -15,14 +15,16 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: #121212;
+            color: #e0e0e0;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-denim.png');
         }
         .gold-text {
             color: #D4AF37;
         }
         .gold-bg {
             background-color: #D4AF37;
+            color: #121212;
         }
         .gold-border {
             border-color: #D4AF37;
@@ -35,10 +37,35 @@
         }
         .package-card {
             transition: all 0.3s ease;
+            background-color: #1e1e1e;
+            border: 1px solid #D4AF37;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
         }
         .package-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+        }
+        header, footer {
+            background-color: #1e1e1e;
+            border-bottom: 1px solid #333;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+        section {
+            background-color: #121212;
+            border-bottom: 1px solid #333;
+            padding: 60px 0;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-denim.png');
+        }
+        input, textarea {
+            background-color: #1e1e1e !important;
+            border: 1px solid #333 !important;
+            color: #e0e0e0 !important;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+        }
+        img {
+            border: 3px solid #D4AF37;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -67,9 +94,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="bg-event-pattern absolute inset-0 opacity-10"></div>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1513151233558-d956c22f00bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover;">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="absolute inset-0" style="background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png'); opacity: 0.3;"></div>
         <div class="container mx-auto px-4 z-10 text-center" data-aos="fade-up">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 heading-font">
                 <span class="gold-text">Capturando</span> Momentos <span class="gold-text">Inesquecíveis</span>
@@ -78,10 +105,10 @@
                 Transformamos seus eventos em memórias eternas através de fotografia e vídeo profissional.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#pacotes" class="gold-bg text-black px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+                <a href="#pacotes" class="gold-bg px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
                     Conheça Nossos Pacotes
                 </a>
-                <a href="#contato" class="border border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-black transition">
+                <a href="#contato" class="border border-amber-900 text-amber-900 px-8 py-3 rounded-full font-medium hover:bg-amber-900 hover:text-white transition">
                     Solicitar Orçamento
                 </a>
             </div>
@@ -89,7 +116,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-20 bg-black">
+    <section class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
@@ -108,8 +135,8 @@
                     <p class="text-lg mb-6 gold-text font-medium">
                         Independente de onde seja o evento, o que ficará para a vida serão os registros de foto e vídeo!
                     </p>
-                    <a href="#contato" class="gold-bg text-black px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition inline-flex items-center">
-                        <i data-feather="mail" class="mr-2"></i> Fale com nossos especialistas
+                    <a href="#contato" class="gold-bg px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition inline-flex items-center">
+                        <i data-feather="message-circle" class="mr-2"></i> Fale com nossos especialistas
                     </a>
                 </div>
             </div>
@@ -211,7 +238,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-20 bg-black">
+    <section class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">
@@ -234,6 +261,12 @@
                 </div>
                 <div class="overflow-hidden rounded-lg" data-aos="fade-up">
                     <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Evento 4" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://huggingface.co/spaces/cyberstar01/up/resolve/main/images/Generated Image September 03, 2025 - 12_17PM.jpeg" alt="Evento 5" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://huggingface.co/spaces/cyberstar01/up/resolve/main/images/Generated Image September 03, 2025 - 12_18PM.jpeg" alt="Evento 6" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
             </div>
         </div>
@@ -271,7 +304,7 @@
                         <label for="message" class="block mb-2 font-medium">Mensagem</label>
                         <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
                     </div>
-                    <button type="submit" class="gold-bg text-black w-full py-3 rounded-full font-medium hover:bg-opacity-90 transition flex items-center justify-center">
+                    <button type="submit" class="gold-bg w-full py-3 rounded-full font-medium hover:bg-opacity-90 transition flex items-center justify-center">
                         <i data-feather="send" class="mr-2"></i> Enviar Mensagem
                     </button>
                 </form>
@@ -280,7 +313,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-gray-800">
+    <footer class="py-12 bg-black border-t border-gray-800">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
