@@ -5,135 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prod. Duo - Capturando Momentos Inesquecíveis</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            color: #fff;
             background-color: #000;
+            color: #fff;
         }
         .gold-text {
             color: #D4AF37;
         }
-        .gold-border {
-            border-color: #D4AF37;
-        }
         .gold-bg {
             background-color: #D4AF37;
         }
-        .hover-gold:hover {
-            color: #D4AF37;
+        .gold-border {
+            border-color: #D4AF37;
+        }
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .floating-btn {
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .package-card {
             transition: all 0.3s ease;
         }
-        .card-hover:hover {
+        .package-card:hover {
             transform: translateY(-10px);
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 25px -5px rgba(212, 175, 55, 0.1), 0 10px 10px -5px rgba(212, 175, 55, 0.04);
-        }
-        .social-icons {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 100;
-        }
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(0,0,0,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #D4AF37;
-            transition: all 0.3s ease;
-        }
-        .social-icon:hover {
-            background-color: #D4AF37;
-            color: #000;
-            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
         }
     </style>
 </head>
-<body class="min-h-screen">
-    <!-- Social Icons -->
-    <div class="social-icons">
-        <a href="https://www.instagram.com/prod.duo?igsh=YXRiMWczZGx4ZHlz" target="_blank" class="social-icon">
-            <i data-feather="instagram"></i>
-        </a>
-        <a href="https://wa.me/5511930711112" target="_blank" class="social-icon">
-            <i data-feather="message-circle"></i>
-        </a>
-        <a href="#" class="social-icon">
-            <i data-feather="youtube"></i>
-        </a>
-    </div>
+<body class="antialiased">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/?text=Olá, gostei dos pacotes gostaria de saber mais." target="_blank" class="fixed bottom-8 right-8 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i data-feather="message-circle"></i>
+    </a>
 
     <!-- Header -->
-    <header class="bg-black py-6 px-4 sm:px-6 lg:px-8 border-b gold-border">
+    <header class="bg-black py-6 px-4 md:px-12 border-b border-gray-800">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <div class="text-3xl font-bold gold-text mr-2">PD</div>
-                <div class="text-xl font-semibold">PROD. DUO</div>
+                <div class="text-3xl font-bold gold-text mr-2 heading-font">PD</div>
+                <div class="text-xl font-semibold gold-text heading-font">Prod. Duo</div>
             </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="hover-gold">Sobre</a>
-                <a href="#packages" class="hover-gold">Pacotes</a>
-                <a href="#contact" class="hover-gold">Contato</a>
-            </nav>
-            <button class="md:hidden">
-                <i data-feather="menu" class="text-white"></i>
-            </button>
+            <a href="https://wa.me/?text=Olá, gostei dos pacotes gostaria de saber mais." target="_blank" class="gold-bg text-black px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition flex items-center">
+                <i data-feather="phone" class="mr-2"></i> Fale Conosco
+            </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center">
-        <div class="container mx-auto px-4 z-10 text-center">
-            <a href="https://wa.me/5511930711112?text=Olá! vi os pacotes e gostaria de saber mais." target="_blank" class="absolute top-6 right-6 gold-bg text-black font-bold py-2 px-4 rounded-full hover:bg-opacity-90 transition duration-300 flex items-center gap-2">
-                <i data-feather="message-circle"></i> FALE CONOSCO
-            </a>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 gold-text">CAPTURANDO MOMENTOS INESQUECÍVEIS</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Independente de onde seja o evento, o que ficará para a vida serão os registros de foto e vídeo!</p>
-            <a href="#packages" class="gold-bg text-black font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300 inline-block">CONHEÇA NOSSOS PACOTES</a>
+    <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="bg-event-pattern absolute inset-0 opacity-10"></div>
+        <div class="container mx-auto px-4 z-10 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 heading-font">
+                <span class="gold-text">Capturando</span> Momentos <span class="gold-text">Inesquecíveis</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transformamos seus eventos em memórias eternas através de fotografia e vídeo profissional.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pacotes" class="gold-bg text-black px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+                    Conheça Nossos Pacotes
+                </a>
+                <a href="#contato" class="border border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-black transition">
+                    Solicitar Orçamento
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'); background-size: cover; background-position: center; color: #fff;">
-        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <section class="py-20 bg-black">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">SOBRE A PROD. DUO</h2>
-                <div class="w-24 h-1 gold-bg mx-auto"></div>
-            </div>
-            <div class="max-w-4xl mx-auto text-center text-lg">
-                <p class="mb-6">Somos uma produtora especializada em capturar os momentos mais importantes da sua vida com excelência e sensibilidade.</p>
-                <p>Com anos de experiência no mercado, nossa equipe é formada por profissionais apaixonados por fotografia e vídeo, dedicados a transformar suas memórias em obras de arte que você poderá reviver sempre que quiser.</p>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Fotógrafo profissional" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 heading-font">
+                        <span class="gold-text">Prod. Duo</span> - Excelência em Produção de Eventos
+                    </h2>
+                    <p class="text-lg mb-6">
+                        Somos especialistas em capturar os momentos mais importantes da sua vida com sensibilidade e profissionalismo.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Nossa equipe é composta por profissionais experientes que dominam as melhores técnicas de fotografia e videografia para garantir registros impecáveis do seu evento.
+                    </p>
+                    <p class="text-lg mb-6 gold-text font-medium">
+                        Independente de onde seja o evento, o que ficará para a vida serão os registros de foto e vídeo!
+                    </p>
+                    <a href="#contato" class="gold-bg text-black px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition inline-flex items-center">
+                        <i data-feather="mail" class="mr-2"></i> Fale com nossos especialistas
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Packages Section -->
-    <section id="packages" class="py-20 relative" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center; color: #fff;">
-        <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <section id="pacotes" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">NOSSOS PACOTES</h2>
-                <div class="w-24 h-1 gold-bg mx-auto"></div>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">
+                    Nossos <span class="gold-text">Pacotes</span>
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto">
+                    Escolha o pacote que melhor atende às suas necessidades e garanta registros profissionais do seu evento.
+                </p>
             </div>
-            <div class="flex flex-wrap justify-center gap-8">
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Package 1 -->
-                <div class="bg-black p-8 rounded-lg border gold-border max-w-md w-full card-hover">
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2 gold-text">PACOTE ESSENCIAL</h3>
-                        <p class="text-xl">R$4.900,00</p>
-                        <p class="text-sm gold-text">ou R$4.000,00 à vista</p>
+                <div class="package-card bg-black p-8 rounded-lg border gold-border" data-aos="fade-up">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2 heading-font gold-text">Pacote Essencial</h3>
+                        <div class="text-3xl font-bold mb-2">R$4.900,00</div>
+                        <div class="text-sm text-gray-400 mb-4">(à vista R$4.000,00)</div>
+                        <div class="h-px bg-gray-700 my-4"></div>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
@@ -161,21 +158,18 @@
                             <span>Entrega de todas as fotos em alta resolução</span>
                         </li>
                     </ul>
-                    <div class="flex items-center justify-center gap-2">
-                        <a href="#contact" class="gold-bg text-black font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 text-center">QUERO ESTE PACOTE</a>
-                        <a href="https://wa.me/5511930711112?text=Olá! vi os pacotes e gostaria de saber mais." target="_blank" class="gold-bg text-black p-3 rounded-full hover:bg-opacity-90 transition duration-300">
-                            <i data-feather="message-circle"></i>
-                        </a>
-                    </div>
+                    <a href="https://wa.me/?text=Olá, gostei dos pacotes gostaria de saber mais sobre o Pacote Essencial." target="_blank" class="gold-bg text-black w-full py-3 rounded-full font-medium hover:bg-opacity-90 transition flex items-center justify-center">
+                        <i data-feather="shopping-cart" class="mr-2"></i> Contratar Pacote
+                    </a>
                 </div>
 
                 <!-- Package 2 -->
-                <div class="bg-black p-8 rounded-lg border gold-border max-w-md w-full card-hover">
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2 gold-text">PACOTE PREMIUM</h3>
-                        <p class="text-xl">R$5.900,00</p>
-                        <p class="text-sm gold-text">ou R$5.200,00 à vista</p>
-                        <p class="text-sm gold-text">50% entrada + 50% até o evento</p>
+                <div class="package-card bg-black p-8 rounded-lg border gold-border" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2 heading-font gold-text">Pacote Premium</h3>
+                        <div class="text-3xl font-bold mb-2">R$5.900,00</div>
+                        <div class="text-sm text-gray-400 mb-4">(à vista R$5.200,00 ou 50% entrada + 50% até o evento)</div>
+                        <div class="h-px bg-gray-700 my-4"></div>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
@@ -200,15 +194,12 @@
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="gold-text mr-2 mt-1"></i>
-                            <span>Entrega de todas das fotos em alta resolução</span>
+                            <span>Entrega de todas as fotos em alta resolução</span>
                         </li>
                     </ul>
-                    <div class="flex items-center justify-center gap-2">
-                        <a href="#contact" class="gold-bg text-black font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition duration-300 text-center">QUERO ESTE PACOTE</a>
-                        <a href="https://wa.me/5511930711112?text=Olá! vi os pacotes e gostaria de saber mais." target="_blank" class="gold-bg text-black p-3 rounded-full hover:bg-opacity-90 transition duration-300">
-                            <i data-feather="message-circle"></i>
-                        </a>
-                    </div>
+                    <a href="https://wa.me/?text=Olá, gostei dos pacotes gostaria de saber mais sobre o Pacote Premium." target="_blank" class="gold-bg text-black w-full py-3 rounded-full font-medium hover:bg-opacity-90 transition flex items-center justify-center">
+                        <i data-feather="shopping-cart" class="mr-2"></i> Contratar Pacote
+                    </a>
                 </div>
             </div>
         </div>
@@ -217,111 +208,116 @@
     <!-- Gallery Section -->
     <section class="py-20 bg-black">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">NOSSOS TRABALHOS</h2>
-                <div class="w-24 h-1 gold-bg mx-auto"></div>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">
+                    Nossos <span class="gold-text">Trabalhos</span>
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto">
+                    Veja alguns dos momentos especiais que tivemos o prazer de registrar.
+                </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://huggingface.co/spaces/Prodduo/prodduo/resolve/main/images/Generated Image September 03, 2025 - 12_17PM.jpeg" alt="Evento 1" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://huggingface.co/spaces/Prodduo/prodduo/resolve/main/images/Generated Image September 03, 2025 - 12_18PM.jpeg" alt="Evento 2" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Evento 3" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Evento 4" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Value Proposition -->
-    <section class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4 text-center">
-            <blockquote class="max-w-4xl mx-auto">
-                <p class="text-2xl md:text-3xl italic mb-6">"Independente de onde seja o evento, o que ficará para a vida serão os registros de foto e vídeo!"</p>
-                <footer class="gold-text font-semibold">— Prod. Duo</footer>
-            </blockquote>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Evento 1" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Evento 2" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Evento 3" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Evento 4" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d956c22f00bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Evento 5" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Evento 6" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-black">
+    <section id="contato" class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 gold-text">ENTRE EM CONTATO</h2>
-                <div class="w-24 h-1 gold-bg mx-auto"></div>
-            </div>
-            <div class="max-w-2xl mx-auto">
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block mb-2">Nome</label>
-                        <input type="text" id="name" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">
+                        Entre em <span class="gold-text">Contato</span>
+                    </h2>
+                    <p class="text-xl max-w-2xl mx-auto">
+                        Solicite um orçamento ou tire suas dúvidas sobre nossos serviços.
+                    </p>
+                </div>
+
+                <form class="bg-black p-8 rounded-lg" data-aos="fade-up">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
                     </div>
-                    <div>
-                        <label for="email" class="block mb-2">E-mail</label>
-                        <input type="email" id="email" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <div class="mb-6">
+                        <label for="phone" class="block mb-2 font-medium">WhatsApp</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
                     </div>
-                    <div>
-                        <label for="whatsapp" class="block mb-2">WhatsApp</label>
-                        <input type="tel" id="whatsapp" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 font-medium">Mensagem</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
                     </div>
-                    <div>
-                        <label for="message" class="block mb-2">Mensagem</label>
-                        <textarea id="message" rows="4" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
-                    </div>
-                    <button type="submit" class="gold-bg text-black font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition duration-300 w-full">ENVIAR MENSAGEM</button>
+                    <button type="submit" class="gold-bg text-black w-full py-3 rounded-full font-medium hover:bg-opacity-90 transition flex items-center justify-center">
+                        <i data-feather="send" class="mr-2"></i> Enviar Mensagem
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t gold-border bg-black text-white">
+    <footer class="bg-black py-12 border-t border-gray-800">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-6 md:mb-0">
-                    <div class="text-3xl font-bold gold-text mr-2">PD</div>
-                    <div class="text-xl font-semibold">PROD. DUO</div>
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="text-3xl font-bold gold-text mr-2 heading-font">PD</div>
+                        <div class="text-xl font-semibold gold-text heading-font">Prod. Duo</div>
+                    </div>
+                    <p class="mt-2 text-gray-400">Capturando momentos inesquecíveis</p>
                 </div>
-                <div class="text-sm">
-                    © 2023 Prod. Duo. Todos os direitos reservados.
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Olá, gostei dos pacotes gostaria de saber mais." target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="message-circle"></i>
+                    </a>
                 </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Prod. Duo. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        feather.replace();
-        
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('button[class="md:hidden"]');
-        const mobileMenu = document.createElement('div');
-        mobileMenu.className = 'hidden fixed inset-0 bg-black z-50 flex flex-col items-center justify-center';
-        mobileMenu.innerHTML = `
-            <button class="absolute top-6 right-6">
-                <i data-feather="x" class="text-white"></i>
-            </button>
-            <nav class="flex flex-col items-center space-y-8">
-                <a href="#about" class="text-2xl hover-gold">Sobre</a>
-                <a href="#packages" class="text-2xl hover-gold">Pacotes</a>
-                <a href="#contact" class="text-2xl hover-gold">Contato</a>
-            </nav>
-        `;
-        document.body.appendChild(mobileMenu);
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            feather.replace();
-            
-            const closeButton = mobileMenu.querySelector('button');
-            closeButton.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
         });
+    </script>
+    <script>
+        feather.replace();
     </script>
 </body>
 </html>
